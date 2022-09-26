@@ -16,7 +16,8 @@ class CsvFileReader {
             encoding: 'utf8',
         })
             .split('\n')
-            .map((data) => data.split(','));
+            .map((data) => data.split(','))
+            .map(this.mapRow);
     }
 }
 exports.CsvFileReader = CsvFileReader;
